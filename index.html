@@ -5,16 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="app.css">
     <title>Document</title>
 </head>
 
 <body>
-<form  id="searchForm">
-    <input type="text" name="query" placeholder="search for TV shows">
-    <button>Search</button>
-</form>
-<div class="results"></div>
+    <form id="searchForm">
+        <input type="text" name="query" placeholder="Search for TV shows" autocomplete="off">
+        <button>Search</button>
+    </form>
+    <div class="results">
+        <!-- <div class="showContainer">
+            <img src="usgs-qXdyKrQ5lqw-unsplash.jpg" alt="" class="showBanner">
+            <h2 class="showTitle">Hey im a title</h2>
+        </div> -->
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

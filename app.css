@@ -1,0 +1,57 @@
+html,
+body {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#searchForm {
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchForm input {
+    width: 40%;
+    height: 2rem;
+    font-family: inherit;
+}
+
+#searchForm button {
+    height: 2.4rem;
+    width: 10%;
+    font-family: inherit;
+
+}
+
+.results {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap:wrap ;
+}
+
+.showContainer {
+    min-width: 250px;
+    width: 18%;
+    height: 20rem;
+    margin: 1%;
+    padding: 2%;
+    border: solid 1px black;
+}
+
+.showBanner {
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.showTitle {
+    font-weight: 400;
+    text-align: center;
+}
