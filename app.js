@@ -12,7 +12,7 @@ searchForm.addEventListener('submit', async (e) => {
       clearResults()
       const config = { params: { q: query } }
       const getTvShows = await axios.get("https://api.tvmaze.com/search/shows", config);
-      makeTvShows(getTvShows.data);
+      makeTvShows(getTvShows);
       console.log("results")
       console.log(getTvShows.data)
    } catch (e) {
@@ -26,8 +26,8 @@ function clearResults() {
       resultsContainer.removeChild(resultsContainer.lastElementChild)
    }
 }
-function makeTvShows(TVshows) {
-
+function makeTvShows(getTvShows) {
+   const TVshows = getTvShows.data;
    for (let item of TVshows) {
       const showContainer = document.createElement('DIV');
       showContainer.classList.add("showContainer");
@@ -44,10 +44,23 @@ function makeTvShows(TVshows) {
          showBanner.src = "images/rollback.svg";
          showBanner.style.width = "40%";
       }
-
+      const genreContainer = document.createElement('P')
+      genreContainer.classList.add("genreContainer");
+      let genre = "Genre:";
+      
+      if (item.show.genres) {
+         genreList = item.show.genres;
+         for(g of genreList){
+            genre += `, ${g}`
+         }
+      }
+      genreContainer.append(genre);
+      console.log(genreList)
+      
       resultsContainer.append(showContainer);
       showContainer.append(showBanner);
       showContainer.append(showTitle);
+      showContainer.append(genreContainer);
 
    }
 }

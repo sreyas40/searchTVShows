@@ -50,7 +50,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 80%;
+    height: 70%;
     object-fit: contain;
     margin: 0 auto;
 }
@@ -58,4 +58,8 @@ body {
 .showTitle {
     font-weight: 400;
     text-align: center;
+}
+.genreContainer{
+    text-align: center;
+    font-weight: 300;
 }
